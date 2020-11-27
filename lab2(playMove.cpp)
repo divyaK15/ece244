@@ -91,57 +91,7 @@ void playMove(GameState& game_state) {
         game_state.set_winCode(0);//game is a draw or not over 
         game_state.set_gameOver(false);
     }
-    
-    
-   
-    
-    
-    
-    
-   /*//row 1
-    if((game_state.get_gameBoard(0,0)== game_state.get_gameBoard(0,1))&&(game_state.get_gameBoard(0,1)== game_state.get_gameBoard(0,2))&&(game_state.get_gameBoard(0,0)!=0)){
-        game_state.set_winCode(1);
-        game_state.set_gameOver(true);
-    }
-    //row 2
-    else if((game_state.get_gameBoard(1,0)== game_state.get_gameBoard(1,1))&&(game_state.get_gameBoard(1,1)== game_state.get_gameBoard(1,2))&&(game_state.get_gameBoard(1,0)!=0)){
-        game_state.set_winCode(2);
-        game_state.set_gameOver(true);
-    }
-    //row 3
-    else if((game_state.get_gameBoard(2,0)== game_state.get_gameBoard(2,1))&&(game_state.get_gameBoard(2,1)== game_state.get_gameBoard(2,2))&&(game_state.get_gameBoard(2,0)!=0)){
-        game_state.set_winCode(3);
-        game_state.set_gameOver(true);
-    }
-    //col 1
-    else if((game_state.get_gameBoard(0,0)== game_state.get_gameBoard(1,0))&&(game_state.get_gameBoard(1,0)== game_state.get_gameBoard(2,0))&&(game_state.get_gameBoard(0,0)!=0)){
-        game_state.set_winCode(4);
-        game_state.set_gameOver(true);
-    }
-    //col 2
-    else if((game_state.get_gameBoard(0,1)== game_state.get_gameBoard(1,1))&&(game_state.get_gameBoard(1,1)== game_state.get_gameBoard(2,1))&&(game_state.get_gameBoard(0,1)!=0)){
-        game_state.set_winCode(5);
-        game_state.set_gameOver(true);
-    }
-    //col 3
-    else if((game_state.get_gameBoard(0,2)== game_state.get_gameBoard(1,2))&&(game_state.get_gameBoard(1,2)== game_state.get_gameBoard(2,2))&&(game_state.get_gameBoard(0,2)!=0)){
-        game_state.set_winCode(6);
-        game_state.set_gameOver(true);
-    }
-    //left to right
-    else if((game_state.get_gameBoard(0,0)== game_state.get_gameBoard(1,1))&&(game_state.get_gameBoard(1,1)== game_state.get_gameBoard(2,2))&&(game_state.get_gameBoard(1,1)!=0)){
-        game_state.set_winCode(7);
-        game_state.set_gameOver(true);
-    }
-    //right to left
-    else if((game_state.get_gameBoard(0,2)== game_state.get_gameBoard(1,1))&&(game_state.get_gameBoard(1,1)== game_state.get_gameBoard(2,0))&&(game_state.get_gameBoard(1,1)!=0)){
-        game_state.set_winCode(8);
-        game_state.set_gameOver(true);
-    }
-    else{
-        game_state.set_winCode(0);//game is a draw or not over 
-        game_state.set_gameOver(false);
-    }*/
+  
     
     for(int i = 0; i<= boardSize-1; i++){
         for (int j = 0; j <= boardSize-1; j++){
