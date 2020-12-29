@@ -1,0 +1,168 @@
+==13428== Memcheck, a memory error detector
+==13428== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==13428== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==13428== Command: /u/c/kaurdivy/ece244/Lab44/Parser.exe
+==13428== Parent PID: 13427
+==13428== 
+==13428== 
+==13428== Process terminating with default action of signal 15 (SIGTERM)
+==13428==    at 0x33882DB7F0: __read_nocancel (in /lib64/libc-2.12.so)
+==13428==    by 0x3388271BC7: _IO_file_underflow@@GLIBC_2.2.5 (in /lib64/libc-2.12.so)
+==13428==    by 0x33882736CD: _IO_default_uflow (in /lib64/libc-2.12.so)
+==13428==    by 0x338826EBBA: getc (in /lib64/libc-2.12.so)
+==13428==    by 0x338EA9055C: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x338EA7C04B: std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char) (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x40134C: main (Parser.cpp:97)
+==13428== 
+==13428== Process terminating with default action of signal 1 (SIGHUP)
+==13428==    at 0x33882DB7F0: __read_nocancel (in /lib64/libc-2.12.so)
+==13428==    by 0x3388271BC7: _IO_file_underflow@@GLIBC_2.2.5 (in /lib64/libc-2.12.so)
+==13428==    by 0x33882736CD: _IO_default_uflow (in /lib64/libc-2.12.so)
+==13428==    by 0x338826EBBA: getc (in /lib64/libc-2.12.so)
+==13428==    by 0x338EA9055C: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x338EA7C04B: std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char) (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x40134C: main (Parser.cpp:97)
+==13428== 
+==13428== HEAP SUMMARY:
+==13428==     in use at exit: 456 bytes in 15 blocks
+==13428==   total heap usage: 20 allocs, 5 frees, 612 bytes allocated
+==13428== 
+==13428== 8 bytes in 1 blocks are still reachable in loss record 1 of 15
+==13428==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==13428==    by 0x40105D: main (Parser.cpp:46)
+==13428== 
+==13428== 8 bytes in 1 blocks are definitely lost in loss record 2 of 15
+==13428==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==13428==    by 0x40228D: GroupNode::GroupNode(std::string) (GroupNode.cpp:36)
+==13428==    by 0x4010D5: main (Parser.cpp:50)
+==13428== 
+==13428== 24 bytes in 1 blocks are still reachable in loss record 3 of 15
+==13428==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==13428==    by 0x4010C7: main (Parser.cpp:50)
+==13428== 
+==13428== 29 bytes in 1 blocks are still reachable in loss record 4 of 15
+==13428==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==13428==    by 0x338EA9C3C8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x338EA9CDE4: ??? (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x338EA9CF32: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x40157F: __static_initialization_and_destruction_0(int, int) (globals.h:30)
+==13428==    by 0x40180C: _GLOBAL__sub_I_keyWordsList (Parser.cpp:122)
+==13428==    by 0x4027FC: __libc_csu_init (in /u/c/kaurdivy/ece244/Lab44/Parser.exe)
+==13428==    by 0x338821ECAF: (below main) (in /lib64/libc-2.12.so)
+==13428== 
+==13428== 29 bytes in 1 blocks are still reachable in loss record 5 of 15
+==13428==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==13428==    by 0x338EA9C3C8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x338EA9CDE4: ??? (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x338EA9CF32: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x4015E7: __static_initialization_and_destruction_0(int, int) (globals.h:30)
+==13428==    by 0x40180C: _GLOBAL__sub_I_keyWordsList (Parser.cpp:122)
+==13428==    by 0x4027FC: __libc_csu_init (in /u/c/kaurdivy/ece244/Lab44/Parser.exe)
+==13428==    by 0x338821ECAF: (below main) (in /lib64/libc-2.12.so)
+==13428== 
+==13428== 29 bytes in 1 blocks are still reachable in loss record 6 of 15
+==13428==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==13428==    by 0x338EA9C3C8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x338EA9CDE4: ??? (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x338EA9CF32: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x40161B: __static_initialization_and_destruction_0(int, int) (globals.h:30)
+==13428==    by 0x40180C: _GLOBAL__sub_I_keyWordsList (Parser.cpp:122)
+==13428==    by 0x4027FC: __libc_csu_init (in /u/c/kaurdivy/ece244/Lab44/Parser.exe)
+==13428==    by 0x338821ECAF: (below main) (in /lib64/libc-2.12.so)
+==13428== 
+==13428== 30 bytes in 1 blocks are still reachable in loss record 7 of 15
+==13428==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==13428==    by 0x338EA9C3C8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x338EA9CDE4: ??? (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x338EA9CF32: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x401516: __static_initialization_and_destruction_0(int, int) (globals.h:30)
+==13428==    by 0x40180C: _GLOBAL__sub_I_keyWordsList (Parser.cpp:122)
+==13428==    by 0x4027FC: __libc_csu_init (in /u/c/kaurdivy/ece244/Lab44/Parser.exe)
+==13428==    by 0x338821ECAF: (below main) (in /lib64/libc-2.12.so)
+==13428== 
+==13428== 30 bytes in 1 blocks are still reachable in loss record 8 of 15
+==13428==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==13428==    by 0x338EA9C3C8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x338EA9CDE4: ??? (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x338EA9CF32: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x40154B: __static_initialization_and_destruction_0(int, int) (globals.h:30)
+==13428==    by 0x40180C: _GLOBAL__sub_I_keyWordsList (Parser.cpp:122)
+==13428==    by 0x4027FC: __libc_csu_init (in /u/c/kaurdivy/ece244/Lab44/Parser.exe)
+==13428==    by 0x338821ECAF: (below main) (in /lib64/libc-2.12.so)
+==13428== 
+==13428== 30 bytes in 1 blocks are still reachable in loss record 9 of 15
+==13428==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==13428==    by 0x338EA9C3C8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x338EA9D19A: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x338EA9D5EB: std::string::reserve(unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x338EA9D867: std::string::append(char const*, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x338EA7AF8D: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x4011F7: main (Parser.cpp:68)
+==13428== 
+==13428== 31 bytes in 1 blocks are still reachable in loss record 10 of 15
+==13428==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==13428==    by 0x338EA9C3C8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x338EA9CDE4: ??? (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x338EA9CF32: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x4015B3: __static_initialization_and_destruction_0(int, int) (globals.h:30)
+==13428==    by 0x40180C: _GLOBAL__sub_I_keyWordsList (Parser.cpp:122)
+==13428==    by 0x4027FC: __libc_csu_init (in /u/c/kaurdivy/ece244/Lab44/Parser.exe)
+==13428==    by 0x338821ECAF: (below main) (in /lib64/libc-2.12.so)
+==13428== 
+==13428== 32 bytes in 1 blocks are still reachable in loss record 11 of 15
+==13428==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==13428==    by 0x338EA9C3C8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x338EA9CDE4: ??? (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x338EA9CF32: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x401666: __static_initialization_and_destruction_0(int, int) (globals.h:33)
+==13428==    by 0x40180C: _GLOBAL__sub_I_keyWordsList (Parser.cpp:122)
+==13428==    by 0x4027FC: __libc_csu_init (in /u/c/kaurdivy/ece244/Lab44/Parser.exe)
+==13428==    by 0x338821ECAF: (below main) (in /lib64/libc-2.12.so)
+==13428== 
+==13428== 33 bytes in 1 blocks are still reachable in loss record 12 of 15
+==13428==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==13428==    by 0x338EA9C3C8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x338EA9CDE4: ??? (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x338EA9CF32: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x4016CE: __static_initialization_and_destruction_0(int, int) (globals.h:33)
+==13428==    by 0x40180C: _GLOBAL__sub_I_keyWordsList (Parser.cpp:122)
+==13428==    by 0x4027FC: __libc_csu_init (in /u/c/kaurdivy/ece244/Lab44/Parser.exe)
+==13428==    by 0x338821ECAF: (below main) (in /lib64/libc-2.12.so)
+==13428== 
+==13428== 34 bytes in 1 blocks are still reachable in loss record 13 of 15
+==13428==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==13428==    by 0x338EA9C3C8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x338EA9CDE4: ??? (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x338EA9CF32: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x40169A: __static_initialization_and_destruction_0(int, int) (globals.h:33)
+==13428==    by 0x40180C: _GLOBAL__sub_I_keyWordsList (Parser.cpp:122)
+==13428==    by 0x4027FC: __libc_csu_init (in /u/c/kaurdivy/ece244/Lab44/Parser.exe)
+==13428==    by 0x338821ECAF: (below main) (in /lib64/libc-2.12.so)
+==13428== 
+==13428== 52 bytes in 1 blocks are still reachable in loss record 14 of 15
+==13428==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==13428==    by 0x338EA9C3C8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x338EA9CDE4: ??? (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x338EA9CF6A: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x338EA9903D: std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >::basic_stringstream(std::string const&, std::_Ios_Openmode) (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x4011E1: main (Parser.cpp:64)
+==13428== 
+==13428== 57 bytes in 1 blocks are still reachable in loss record 15 of 15
+==13428==    at 0x4A07D73: operator new(unsigned long) (vg_replace_malloc.c:332)
+==13428==    by 0x338EA9C3C8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x338EA9D19A: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x338EA9D5EB: std::string::reserve(unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x338EA7BFF4: std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char) (in /usr/lib64/libstdc++.so.6.0.13)
+==13428==    by 0x4011A5: main (Parser.cpp:59)
+==13428== 
+==13428== LEAK SUMMARY:
+==13428==    definitely lost: 8 bytes in 1 blocks
+==13428==    indirectly lost: 0 bytes in 0 blocks
+==13428==      possibly lost: 0 bytes in 0 blocks
+==13428==    still reachable: 448 bytes in 14 blocks
+==13428==                       of which reachable via heuristic:
+==13428==                         stdstring          : 416 bytes in 12 blocks
+==13428==         suppressed: 0 bytes in 0 blocks
+==13428== 
+==13428== For counts of detected and suppressed errors, rerun with: -v
+==13428== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 4 from 4)
